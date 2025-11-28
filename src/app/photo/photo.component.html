@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row" >
+    <div class="col-md-4 mt-5" *ngFor="let video of videos">
+      <div class="card" style="width: 18rem">
+        <img src="{{video.phone}}" class="card-img-top" alt="600x400" />
+        <div class="card-body">
+          <h5 class="card-title">{{video.vName}}</h5>
+          <p class="card-text">
+           {{video.vName}}
+          </p>
+          <a (click)="likeCounter(video)" class="btn btn-success"><i class="fa fa-thumbs-up" aria-hidden="true"></i> &nbsp;Like ({{video.like}})</a> &nbsp;  &nbsp;
+          <a (click)="dislikeCounter(video)" class="btn btn-danger"><i class="fa fa-thumbs-down" aria-hidden="true"></i> &nbsp;Dislike ({{video.dislike}})</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
